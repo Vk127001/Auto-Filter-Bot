@@ -7,7 +7,7 @@
   <b>𝘼𝙪𝙩𝙤 𝙁𝙞𝙡𝙩𝙚𝙧 𝘽𝙤𝙩</b>
 </h1>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝑊𝑒𝑙𝑐𝑜𝑚𝑒!;𝐶𝑟𝑒𝑎𝑡𝑒𝑑+𝑏𝑦+@HA_Bots;𝐴+𝑠𝑖𝑚𝑝𝑙𝑒+𝑎𝑛𝑑+𝑝𝑜𝑤𝑒𝑟𝑓𝑢𝑙+𝐵𝑜𝑡!;𝐼𝑛𝑑𝑒𝑥𝑒𝑠+𝐹𝑖𝑙𝑒𝑠+𝑎𝑏𝑜𝑣𝑒+4𝐺𝐵)](https://github.com/HA-Bots/Auto-Filter-Bot)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝑊𝑒𝑙𝑐𝑜𝑚𝑒!;𝐶𝑟𝑒𝑎𝑡𝑒𝑑+𝑏𝑦+@HA_Bots;𝐴+𝑠𝑖𝑚𝑝𝑙𝑒+𝑎𝑛𝑑+𝑝𝑜𝑤𝑒𝑟𝑓𝑢𝑙+𝐵𝑜𝑡!;𝐼𝑛𝑑𝑒𝑥𝑒𝑠+𝐹𝑖𝑙𝑒𝑠+𝑎𝑏𝑜𝑣𝑒+4𝐺𝐵)](https://github.com/Vk127001/Auto-Filter-Bot)
 
 ## 𝐹𝑒𝑎𝑡𝑢𝑟𝑒𝑠
 - [x] 𝐼𝑀𝐷𝐵 𝑇𝑒𝑚𝑝𝑙𝑎𝑡𝑒 𝑆𝑒𝑡
@@ -81,7 +81,7 @@
 * `LANGUAGES`: Language of your bot search (Multiple languages can be used separated by space)
 * `PICS`: Telegraph links of images to show in start message. (Multiple images can be used separated by space)
 * `OPENAI_API`: OpenAI API. Get this value from [API keys](https://platform.openai.com/account/api-keys).
-* Check [info.py](https://github.com/HA-Bots/Auto-Filter-Bot/blob/main/info.py) for more optional variables
+* Check [info.py]([https://github.com/Vk127001/Auto-Filter-Bot](https://github.com/Vk127001)/blob/main/info.py) for more optional variables
 
 
 ## Deploy
@@ -92,7 +92,7 @@
 <br>
 <br>
 
-<a href="https://heroku.com/deploy?template=https://github.com/HA-Bots/Auto-Filter-Bot">
+<a href="https://heroku.com/deploy?template=https://github.com/Vk127001/Auto-Filter-Bot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy To Heroku">
 </a>
 </p>
@@ -104,7 +104,7 @@
 <br>
 <br>
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/HA-Bots/Auto-Filter-Bot&branch=main&name=Auto-Filter-Bot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=git/Auto-Filter-Bot&branch=https://github.com/Vk127001main&name=Auto-Filter-Bot)
 </details>
 
 <details><summary>Deploy To Render</summary>
@@ -122,7 +122,7 @@ Use these commands:
 <b>Click on the below button to deploy on render.</b>
 <br>
 <br>
-<a href="https://render.com/deploy?repo=https://github.com/HA-Bots/Auto-Filter-Bot/tree/main">
+<a href="https://render.com/deploy?repo=https://github.com/Vk127001/Auto-Filter-Bot/tree/main">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 </details>
