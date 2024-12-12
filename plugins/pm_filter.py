@@ -442,21 +442,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         return 
                 
-  elif query.data.startswith("checksub"):
-       ident, mc = query.data.split("#")
-       settings = await get_settings(int(mc.split("_", 2)[1]))
-         btn = await is_subscribed(client, query, settings['fsub'])
-      if btn:
-          await query.answer(f"Hello {query.from_user.first_name},\nPlease join my updates channel and try again.", show_alert=True)
-         btn.append(
-             [InlineKeyboardButton("🔁 Try Again 🔁", callback_data=f"checksub#{mc}")]
-         )
-          await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
-           return
-             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={mc}")
-              await query.message.delete()
-
-
+                  
+    elif query.data.startswith("checksub"):
+        ident, mc = query.data.split("#")
+        settings = await get_settings(int(mc.split("_", 2)[1]))
+        btn = await is_subscribed(client, query, settings['fsub'])
+        if btn:
+            await query.answer(f"Hello {query.from_user.first_name},\nPlease join my updates channel and try again.", show_alert=True)
+            btn.append(
+                [InlineKeyboardButton("🔁 Try Again 🔁", callback_data=f"checksub#{mc}")]
+            )
+            await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+            return
+        await query.answer(url=f"https://t.me/{temp.U_NAME}?start={mc}")
+        await query.message.delete()
+        
 
 
 
