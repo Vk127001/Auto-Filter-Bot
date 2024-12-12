@@ -2,6 +2,17 @@ import re, logging
 from os import environ
 from Script import script
 
+id_pattern = re.compile(r'^.\d+$')
+def is_enabled(value, default):
+    if value.lower() in ["true", "yes", "1", "enable", "y"]:
+        return True
+    elif value.lower() in ["false", "no", "0", "disable", "n"]:
+        return False
+    else:
+        return default
+
+
+
 def is_enabled(type, value):
     data = environ.get(type, str(value))
     if data.lower() in ["true", "yes", "1", "enable", "y"]:
