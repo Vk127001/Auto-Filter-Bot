@@ -7,7 +7,7 @@ from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidD
 from Script import script
 from datetime import datetime, timedelta
 import pyrogram
-from info import ADMINS, URL, MAX_BTN, BIN_CHANNEL, IS_STREAM, DELETE_TIME, FILMS_LINK, AUTH_CHANNEL, IS_VERIFY, VERIFY_EXPIRE, LOG_CHANNEL, SUPPORT_GROUP, SUPPORT_LINK, UPDATES_LINK, PICS, PROTECT_CONTENT, IMDB, AUTO_FILTER, SPELL_CHECK, IMDB_TEMPLATE, AUTO_DELETE, LANGUAGES, IS_FSUB, PAYMENT_QR
+from info import ADMINS, URL, MAX_BTN, BIN_CHANNEL, IS_STREAM, DELETE_TIME, FILMS_LINK, AUTH_CHANNEL, IS_VERIFY, VERIFY_EXPIRE, LOG_CHANNEL, SUPPORT_GROUP, SUPPORT_LINK, UPDATES_LINK, PICS, PROTECT_CONTENT, IMDB, AUTO_FILTER, SPELL_CHECK, IMDB_TEMPLATE, AUTO_DELETE, LANGUAGES, IS_FSUB, PAYMENT_QR, REQ_CHANNEL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ChatPermissions
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid, ChatAdminRequired
@@ -442,19 +442,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         return 
                 
-    elif query.data.startswith("checksub"):
-        ident, mc = query.data.split("#")
-        settings = await get_settings(int(mc.split("_", 2)[1]))
-        btn = await is_subscribed(client, query, settings['fsub'])
-        if btn:
-            await query.answer(f"Hello {query.from_user.first_name},\nPlease join my updates channel and try again.", show_alert=True)
-            btn.append(
-                [InlineKeyboardButton("🔁 Try Again 🔁", callback_data=f"checksub#{mc}")]
-            )
-            await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+ #  elif query.data.startswith("checksub"):
+       #ident, mc = query.data.split("#")
+    #    settings = await get_settings(int(mc.split("_", 2)[1]))
+  #    btn = await is_subscribed(client, query, settings['fsub'])
+  #    if btn:
+      #     await query.answer(f"Hello {query.from_user.first_name},\nPlease join my updates channel and try again.", show_alert=True)
+     #      btn.append(
+        #       [InlineKeyboardButton("🔁 Try Again 🔁", callback_data=f"checksub#{mc}")]
+       #    )
+    #        await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+      #      return
+    #    await query.answer(url=f"https://t.me/{temp.U_NAME}?start={mc}")
+   #    await query.message.delete()
+
+elif query.data.startswith("checksub"):
+        if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
+            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
             return
-        await query.answer(url=f"https://t.me/{temp.U_NAME}?start={mc}")
-        await query.message.delete()
+        ident, file_id = query.data.split("#")
+        files_ = await get_file_details(file_id)
+
+
 
     elif query.data.startswith("unmuteme"):
         ident, chatid = query.data.split("#")
